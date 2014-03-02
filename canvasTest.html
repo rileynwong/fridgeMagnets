@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.1.min.js"></script>
+    <script defer="defer">
+      function drawImage(imageObj) { 
+        var stage = new Kinetic.Stage({
+          container: "container",
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+        var layer = new Kinetic.Layer();
+
+        // magnet
+        var magnetImg = new Kinetic.Image({
+          image: imageObj,
+          x: 100,
+          y: 30,
+          width: 45,
+          height: 20,
+          draggable: true
+        });
+
+        // add cursor styling
+        magnetImg.on('mouseover', function() {
+          document.body.style.cursor = 'pointer';
+        });
+        magnetImg.on('mouseout', function() {
+          document.body.style.cursor = 'default';
+        });
+
+        layer.add(magnetImg);
+        stage.add(layer);
+      }
+      var imageObj = new Image();
+      imageObj.onload = function() {
+        drawImage(this);
+      };
+      imageObj.src = 'http://i.imgur.com/d9wUKrf.png';
+
+    </script>
+    <script src=""></script>
+  </body>
+</html>
