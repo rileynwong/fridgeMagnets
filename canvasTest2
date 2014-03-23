@@ -20,6 +20,9 @@
         });
         var layer = new Kinetic.Layer();
 
+	
+
+
 	var testWords = [ 'apple', 'banana', 'cantelope' ];
 
 /*
@@ -52,7 +55,7 @@
 	group.add(rect);
 	layer.add(group);
 
-
+	}
 
 
 
