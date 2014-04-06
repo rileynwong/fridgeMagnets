@@ -43,7 +43,6 @@ Weather.getCurrent(city, function(current) {
   else if (conditions.toLowerCase().indexOf("snow") !== -1 | conditions.toLowerCase().indexOf("sleet") !== -1) {
     words = snowSet;
     document.body.style.background = '#f4f4f4';
-
   }
   else {
     words = ['no', 'weather', 'info', 'found'].concat(clearSet);
