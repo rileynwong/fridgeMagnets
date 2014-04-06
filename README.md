@@ -2,6 +2,8 @@ fridgeMagnets
 =============
 magnetic poetry based on current weather conditions
 
+working example: http://nancywong.github.io/fridgeMagnets/
+
 generates different sets of magnets based on your current weather conditions (clear, rainy, stormy, snowy)
 
 click + drag to move magnets around
