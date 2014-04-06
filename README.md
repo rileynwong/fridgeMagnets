@@ -17,10 +17,10 @@ conditions: 'sky is clear'
 ![sky is clear](http://i.imgur.com/s71rnbH.png)
 
 conditions: 'thunderstorm'
-[thunderstorm](http://i.imgur.com/G41XbAM)
+![thunderstorm](http://i.imgur.com/G41XbAM)
 
 conditions: 'light drizzle'
-[light drizzle](http://i.imgur.com/TCU7uGc)
+![light drizzle](http://i.imgur.com/TCU7uGc)
 
 conditions: 'sleet'
-[sleet](http://i.imgur.com/IjjEY1N)
+![sleet](http://i.imgur.com/IjjEY1N)
