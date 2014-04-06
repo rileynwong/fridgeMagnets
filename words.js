@@ -14,33 +14,47 @@ $.get("http://ipinfo.io", function(response) {
   city = response.city;
 }, "jsonp");
 
+var createClear = function() {
+  words = Words.clearSet;
+  document.body.style.background = '#d0e4eb';
+}
+
+var createStorm = function() {
+  words = Words.stormSet;
+  document.body.style.background = '#2b6578';
+}
+
+var createRain = function() {
+  words = Words.rainSet;
+  document.body.style.background = '#7ab4c7';
+}
+
+var createSnow = function() {
+  words = Words.snowSet;
+  document.body.style.background = '#f4f4f4';
+}
+
 Weather.getCurrent(city, function(current) {
   console.log(["current conditions:" + current.conditions()].join(" "));
   conditions = current.conditions();
-
   console.log(city);
 
   // if clear
   if (conditions.toLowerCase().indexOf("clear") !== -1 | conditions.toLowerCase().indexOf("clouds") !== -1) {
-    words = Words.clearSet;
-    document.body.style.background = '#d0e4eb';
+    createClear();    
   }
   // if storm
   else if (conditions.toLowerCase().indexOf("storm") !== -1) {
-    words = Words.stormSet;
-    document.body.style.background = '#2b6578';
+    createStorm();
   }
   // if rain or drizzle
   else if (conditions.toLowerCase().indexOf("rain") !== -1 | conditions.toLowerCase().indexOf("drizzle") !== -1 |
            conditions.toLowerCase().indexOf("haze") !== -1 ) {
-    words = Words.rainSet;
-    document.body.style.background = '#7ab4c7';
+    createRain();
   }
   // if snow or sleet
   else if (conditions.toLowerCase().indexOf("snow") !== -1 | conditions.toLowerCase().indexOf("sleet") !== -1) {
-    words = Words.snowSet;
-    document.body.style.background = '#f4f4f4';
-  }
+    createSnow();  }
   else {
     words = ['no', 'weather', 'info', 'found'].concat(Words.clearSet);
     document.body.style.background = '#ffffff';
@@ -79,7 +93,6 @@ Weather.getCurrent(city, function(current) {
     group.add(simpleText);
   		
     layer.add(group);
-  	    
   
     displayWidth = displayWidth + simpleText.getWidth() + 12;
   
