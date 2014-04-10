@@ -2,11 +2,13 @@ fridgeMagnets
 =============
 magnetic poetry based on current weather conditions
 
-working example:
+working example: http://nancywong.github.io/fridgeMagnets/
 
-dependencies:
-weather.js:
- 
+generates different sets of magnets based on your current weather conditions (clear, rainy, stormy, snowy)
+
+click + drag to move magnets around
+
+uses [ipinfo.io](http://ipinfo.io/)'s IP Geolocation API to find current location and [Weather.js](http://weatherjs.com/) Javascript weather library to fetch weather data from [OpenWeatherMap](http://openweathermap.org/)'s API
 
 fridgeMagnets finds the user's current location by IP address to determine the current weather conditions.
 Based on the weather conditions, the set of magnets displayed will be different. For example, if it is a 
