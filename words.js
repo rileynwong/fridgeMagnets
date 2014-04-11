@@ -36,6 +36,7 @@ var createSnow = function() {
 
 Weather.getCurrent(city, function(current) {
   conditions = current.conditions();
+console.log("current conditions: " + conditions);
 
   // if clear
   if (conditions.toLowerCase().indexOf("clear") !== -1 | conditions.toLowerCase().indexOf("clouds") !== -1) {
