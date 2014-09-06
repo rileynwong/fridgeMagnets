@@ -55,8 +55,7 @@ console.log("current conditions: " + conditions);
   else if (conditions.toLowerCase().indexOf("snow") !== -1 | conditions.toLowerCase().indexOf("sleet") !== -1) {
     createSnow();  }
   else {
-    words = ['no', 'weather', 'info', 'found'].concat(Words.clearSet);
-    document.body.style.background = '#ffffff';
+    createClear();
   }
 	
   var displayWidth = window.innerWidth / 8;
